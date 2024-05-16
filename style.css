@@ -1,0 +1,62 @@
+/* ROBOTO import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+
+    --primary-color: #A5B4FC;
+    --secondary-color:  #F7D4BC;
+}
+
+.logo {
+    height: 2.5rem;
+    fill: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 45px;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    color: white;
+    align-items: center;
+}
+
+.book-list {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    gap: 15px;
+
+}
+
+.icon {
+    fill: var(--primary-color);
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: grid;
+}
+
+.add-book {
+    justify-self: center;
+    align-self: center;
+    cursor: grab;
+}
