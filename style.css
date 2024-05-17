@@ -11,6 +11,10 @@ a {
     color: inherit;
 }
 
+li {
+    list-style: none;
+}
+
 body {
     height: 100vh;
     font-family: "Roboto", sans-serif;
@@ -37,15 +41,22 @@ body {
 .book-list {
     padding: 25px;
     display: grid;
-    grid-template-columns: auto;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: flex-start;
     gap: 15px;
 
 }
 
 .icon {
-    fill: var(--primary-color);
+    fill: var(--secondary-color);
+}
+
+.small-icon {
+    height: 18px;
+    position: relative;
+    fill: red;
+    border: 1px solid red;
+    cursor: grab;
 }
 
 .card {
@@ -59,4 +70,43 @@ body {
     justify-self: center;
     align-self: center;
     cursor: grab;
+}
+
+dialog {
+    margin: auto;
+    padding: 15px;
+}
+
+dialog header {
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    margin-bottom: 10px;
+}
+
+dialog form div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+dialog input[type="text"],
+dialog input[type="number"] {
+    margin-left: 5px;
+}
+
+dialog input[type="number"] {
+    width: 5ch;
+    margin-right: auto;
+}
+
+fieldset {
+    padding: 15px;
+}
+
+dialog footer button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    font-weight: bolder;
 }

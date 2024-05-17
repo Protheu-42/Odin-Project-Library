@@ -4,21 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PagePal</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header">
-        <div><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-heart</title><path d="M19 23.3L18.4 22.8C16.4 20.9 15 19.7 15 18.2C15 17 16 16 17.2 16C17.9 16 18.6 16.3 19 16.8C19.4 16.3 20.1 16 20.8 16C22 16 23 16.9 23 18.2C23 19.7 21.6 20.9 19.6 22.8L19 23.3M6 22C4.89 22 4 21.1 4 20V4C4 2.89 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.08L19 13C15.69 13 13 15.69 13 19C13 20.09 13.29 21.12 13.8 22H6Z" /></svg>PagePal</div>
+        <div><svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>PagePal</title><path d="M19 23.3L18.4 22.8C16.4 20.9 15 19.7 15 18.2C15 17 16 16 17.2 16C17.9 16 18.6 16.3 19 16.8C19.4 16.3 20.1 16 20.8 16C22 16 23 16.9 23 18.2C23 19.7 21.6 20.9 19.6 22.8L19 23.3M6 22C4.89 22 4 21.1 4 20V4C4 2.89 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.08L19 13C15.69 13 13 15.69 13 19C13 20.09 13.29 21.12 13.8 22H6Z" /></svg>PagePal</div>
         <a href="">Guest</a>
     </div>
     <div class="book-list">
         <div class="card">
-            <p class="add-book"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bookmark-plus-outline</title><path d="M17,18V5H7V18L12,15.82L17,18M17,3A2,2 0 0,1 19,5V21L12,18L5,21V5C5,3.89 5.9,3 7,3H17M11,7H13V9H15V11H13V13H11V11H9V9H11V7Z" /></svg> Add a book</p>
+            <p class="add-book"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Add a Book</title><path d="M17,18V5H7V18L12,15.82L17,18M17,3A2,2 0 0,1 19,5V21L12,18L5,21V5C5,3.89 5.9,3 7,3H17M11,7H13V9H15V11H13V13H11V11H9V9H11V7Z" /></svg> Add a book</p>
+        </div>
+        <div class="card">
+            <header>Title</header>
+            <ul>
+                <li>Author</li>
+                <li>Pages</li>
+                <li>Reading</li>
+                <li><button type="button">Toggle Reading</button></li>
+            </ul>
         </div>        
     </div>
     <dialog>
-        WIP
+        <header>
+            <h3>Add New Book</h3>
+            <div><svg class="small-icon close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Close</title><path d="M20 6.91L17.09 4L12 9.09L6.91 4L4 6.91L9.09 12L4 17.09L6.91 20L12 14.91L17.09 20L20 17.09L14.91 12L20 6.91Z" /></svg></div>
+        </header>
+        <form method="dialog">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author">
+            </div>
+            <div>
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" name="pages">
+            </div>
+            <fieldset>
+                <legend>Read Status</legend>
+                <input type="checkbox" id="reading">
+                <label for="reading">Reading</label>
+            </fieldset>
+        </form>
+        <footer>
+            <button>Save</button>
+        </footer>
     </dialog>
+    <output></output>
 </body>
 </html>
