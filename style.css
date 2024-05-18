@@ -11,10 +11,6 @@ a {
     color: inherit;
 }
 
-li {
-    list-style: none;
-}
-
 body {
     height: 100vh;
     font-family: "Roboto", sans-serif;
@@ -41,8 +37,7 @@ body {
 .book-list {
     padding: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
     gap: 15px;
 
 }
@@ -60,10 +55,26 @@ body {
 }
 
 .card {
-    width: 200px;
     height: 200px;
     border: 1px solid black;
     display: grid;
+}
+
+.book-card-content {
+    padding: 15px;
+}
+
+.book-card-content header {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.book-card-content header span {
+    visibility: hidden;
+}
+
+.book-card-content div {
+    margin-bottom: 5px;
 }
 
 .add-book {
