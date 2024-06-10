@@ -37,7 +37,7 @@ body {
 .book-list {
     padding: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 25%));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 20%));
     gap: 15px;
 
 }
@@ -55,13 +55,14 @@ body {
 }
 
 .card {
-    height: 200px;
+    height: 250px;
     border: 1px solid black;
     display: grid;
 }
 
 .book-card-content {
     padding: 15px;
+    display: grid;
 }
 
 .book-card-content header {
@@ -75,6 +76,15 @@ body {
 
 .book-card-content div {
     margin-bottom: 5px;
+}
+
+.book-card-content button {
+    justify-self: flex-start;
+    padding: 3px 10px;
+}
+
+.delete {
+    margin-top: 15px;
 }
 
 .add-book {
